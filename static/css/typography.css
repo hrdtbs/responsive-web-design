@@ -7,6 +7,10 @@ html {
   font-family: "Mplus 1p", sans-serif;
 }
 
+.container {
+  margin: 3vw 6vw;
+}
+
 /*
   Font size: 12
   Line height: 1.5
