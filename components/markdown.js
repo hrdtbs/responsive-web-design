@@ -1,6 +1,19 @@
 import ReactMarkdown from "react-markdown";
 import { Highlight } from "react-fast-highlight";
 
+function flatten(text, child) {
+  return typeof child === "string"
+    ? text + child
+    : React.Children.toArray(child.props.children).reduce(flatten, text);
+}
+
+function HeadingRenderer(props) {
+  var children = React.Children.toArray(props.children);
+  var text = children.reduce(flatten, "");
+  var slug = text.toLowerCase().replace(/\W/g, "-");
+  return React.createElement("h" + props.level, { id: slug }, props.children);
+}
+
 const Link = props =>
   props.href.slice(0, 1) === "#" ? (
     <a href={props.href}>{props.children}</a>
@@ -40,7 +53,8 @@ const Markdown = ({ source }) => {
       renderers={{
         link: Link,
         code: Code,
-        image: Image
+        image: Image,
+        Heading: HeadingRenderer
       }}
     />
   );
