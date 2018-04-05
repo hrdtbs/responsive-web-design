@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+<style>
+    .responsive-text::after {
+        content: "553px以下";
+    }
+
+    @media (min-width: 544px) {
+        .responsive-text:after {
+            content: "554px以上";
+        }
+    }
+
+    @media (min-width: 768px) {
+        .responsive-text:after {
+            content: "768px以上";
+        }
+    }
+
+    @media (min-width: 992px) {
+        .responsive-text:after {
+            content: "992px以上";
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .responsive-text:after {
+            content: "1200px以上";
+        }
+    }
+</style>
+<p class="responsive-text">ブラウザの幅は</p>

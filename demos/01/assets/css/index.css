@@ -1,0 +1,194 @@
+/* reset */
+
+body {
+  font-family: "Mplus 1p", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 2rem;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+section,
+article,
+nav,
+aside {
+  padding: 0 1em;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* layout */
+
+.layout-header {
+  color: white;
+  background-color: coral;
+}
+
+.layout-main {
+  display: flex;
+}
+
+.layout-main-body {
+  width: 70%;
+}
+
+.layout-main-sidebar {
+  width: 30%;
+}
+
+.layout-footer {
+  background-color: indianred;
+  color: white;
+  min-height: 100px;
+}
+
+/* vertical menu */
+
+.vertical-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vertical-menu ul {
+  display: flex;
+}
+
+.vertical-menu ul li {
+  padding: 1em 0.5em;
+}
+
+/* book */
+
+.book {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-title {
+  width: 100%;
+}
+
+/* chapter */
+
+.chapter {
+  width: calc(50% - 2em);
+  max-height: 600px;
+  overflow: hidden;
+
+  position: relative;
+  padding-bottom: 4em;
+}
+
+.chapter-btn {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 50px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 -1em 4em 1em white;
+
+  transition: 0.3s;
+}
+
+.chapter-btn:hover {
+  background-color: coral;
+  color: white;
+}
+
+.chapter-title {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* table of contents */
+
+.toc li {
+  margin: 0.5em 0;
+}
+
+/* copyright */
+
+.copyright-container {
+  position: relative;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* responsive */
+
+@media (max-width: 992px) {
+  .chapter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    flex-wrap: wrap;
+  }
+  .layout-main-body,
+  .layout-main-sidebar {
+    width: 100%;
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 544px) {
+  nav,
+  aside,
+  section,
+  article {
+    padding: 0;
+  }
+  .vertical-menu,
+  .vertical-menu ul {
+    flex-wrap: wrap;
+  }
+  .vertical-menu-title,
+  .vertical-menu ul {
+    width: 100%;
+  }
+  .vertical-menu-title {
+    text-align: center;
+  }
+  .vertical-menu ul {
+    justify-content: center;
+  }
+  .vertical-menu ul li {
+    max-width: none;
+  }
+}

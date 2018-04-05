@@ -1,0 +1,27 @@
+.responsive-bg{
+    background-color: #AAAAAA;
+}
+
+@media (min-width: 1200px){
+    .responsive-bg{
+        background-color: #CC88EE;
+    }
+}
+
+@media (min-width: 992px){
+    .responsive-bg{
+        background-color: #88CCEE;
+    }    
+}
+
+@media (min-width: 768px){
+    .responsive-bg{
+        background-color: #88EECC;
+    }
+}
+
+@media (min-width: 544px){
+    .responsive-bg{
+        background-color: #CCEE88;
+    }
+}
