@@ -1,4 +1,3 @@
-import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Highlight } from "react-fast-highlight";
 

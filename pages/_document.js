@@ -8,6 +8,10 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+          />
+          <link
             href="https://fonts.googleapis.com/earlyaccess/mplus1p.css"
             rel="stylesheet"
           />
@@ -15,11 +19,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-dark.min.css"
           />
-          <style jsx global>{`
-            html {
-              font-family: "Mplus 1p";
-            }
-          `}</style>
+          <link rel="stylesheet" href="../static/css/typography.css" />
           <title>Responsive Web Design</title>
         </Head>
         <body>
