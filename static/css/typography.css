@@ -5,6 +5,8 @@ html {
 
   -webkit-font-smoothing: antialiased;
   font-family: "Mplus 1p", sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 .container {
