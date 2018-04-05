@@ -12,8 +12,12 @@ function HeadingRenderer(props) {
   var text = children.reduce(flatten, "");
   var slug = text
     .toLowerCase()
-    .replace(/(<|>|&|"|'|\u005c|\u0020)/g, "-")
-    .replace(/(\(|\))/g, "");
+    .replace(
+      /[\]\[\!\"\#\$\%\&\'\(\)\*\+\,\.\/\:\;\<\=\>\?\@\\\^\_\{\|\}\~]/g,
+      ""
+    )
+    .replace(/\s+/g, "-")
+    .replace(/\-+$/, ""); // Replace trailing hyphen
   return React.createElement("h" + props.level, { id: slug }, props.children);
 }
 
