@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-dark.min.css"
           />
-          <link rel="stylesheet" href={"/static/css/typography.css"} />
+          <link rel="stylesheet" href="./static/css/typography.css" />
           <title>Responsive Web Design</title>
         </Head>
         <body>
