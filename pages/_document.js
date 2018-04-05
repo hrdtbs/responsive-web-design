@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
           />
           <link
             rel="stylesheet"
-            href={process.env.BACKEND_URL + "static/css/typography.css"}
+            href={process.env.BACKEND_URL + "/static/css/typography.css"}
           />
           <title>Responsive Web Design</title>
         </Head>
