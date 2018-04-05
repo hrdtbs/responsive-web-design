@@ -10,7 +10,10 @@ function flatten(text, child) {
 function HeadingRenderer(props) {
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, "");
-  var slug = text.toLowerCase().replace(/\W/g, "-");
+  var slug = text
+    .toLowerCase()
+    .replace(/(<|>|&|"|'|\u005c|\u0020)/g, "-")
+    .replace(/(\(|\))/g, "");
   return React.createElement("h" + props.level, { id: slug }, props.children);
 }
 
@@ -54,7 +57,7 @@ const Markdown = ({ source }) => {
         link: Link,
         code: Code,
         image: Image,
-        Heading: HeadingRenderer
+        heading: HeadingRenderer
       }}
     />
   );
