@@ -6,6 +6,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <base href={process.env.BACKEND_URL} />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link
             rel="stylesheet"
@@ -19,7 +20,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/atom-one-dark.min.css"
           />
-          <link rel="stylesheet" href="../static/css/typography.css" />
+          <link rel="stylesheet" href={"/static/css/typography.css"} />
           <title>Responsive Web Design</title>
         </Head>
         <body>
